@@ -1,0 +1,73 @@
+@mixin vis-brand {
+    /* Colors: */
+    --dark: #000000;
+    --dark-grey: #111820;
+    --dark-bluegrey4: #1D2835;
+    --dark-bluegrey3: #293340;
+    --dark-bluegrey2: #343E4A;
+    --dark-bluegrey1: #565E68;
+    --dark-selected: #19232D;
+    --trim-color: var(--dark-bluegrey1);
+    --white: #FFFFFF;
+    --brand-marigold: #FFBC4E;
+    --primary-hover: rgba(255, 188, 78, 0.058823529411764705);
+    --light-color: #dcdcdc;
+    --lightest-color: #ffffff;
+    --lightest-color-60: rgba(255, 255, 255, 0.6);
+    --lightest-color-30: rgba(255, 255, 255, 0.3);
+    --critical-color: #D1478A;
+    --hot-mag: #D1478A;
+    --debug-color: #00A16B;
+    --error-color: #ff5000;
+    --information-color: #648FFF;
+    --sky-color: #648FFF;
+    --royalty-color: #7D61FA;
+    --success-color: #00C853;
+    --trace-color: #4b5563;
+    --warning-color: #EED202;
+    --disabled-color: rgba(255,255,255,0.4);
+    --disabled-hover-color: #343E4A;
+    /*********************************************************/
+    /* Override MudBlazor Variables                          */
+    /* https://www.mudblazor.com/customization/default-theme */
+    /*********************************************************/
+    /* Disabled ReSharper feature because these variables are used by MudBlazor and just not detected as used. */
+    /* ReSharper disable Redundant */
+    --mud-palette-primary: var(--brand-marigold) !important;
+    --mud-palette-primary-rgb: 255, 178, 88 !important;
+    --mud-palette-primary-darken: rgb(255, 173, 41) !important;
+    --mud-palette-primary-lighten: rgb(255, 200, 41) !important;
+    --mud-palette-primary-hover: var(--dark-selected) !important;
+    --mud-palette-dark: var(--dark-bluegrey4) !important;
+    --mud-palette-black: var(--dark) !important;
+    --mud-palette-surface: var(--dark-bluegrey3) !important;
+    --mud-palette-background: var(--dark-bluegrey4) !important;
+    --mud-palette-secondary: var(--lightest-color) !important;
+    --mud-palette-surface: var(--dark-bluegrey4) !important;
+    --mud-palette-grey-darker: var(--dark-bluegrey4) !important;
+    --mud-palette-background-grey: var(--dark-bluegrey3) !important;
+    --mud-palette-dark-text: var(--lightest-color) !important;
+    --mud-palette-action-default: var(--brand-marigold) !important;
+    --mud-palette-action-default-hover: var(--primary-hover) !important;
+    --mud-palette-action-disabled: rgba(255, 255, 255, 0.26) !important;
+    --mud-palette-action-disabled-background: rgba(255, 255, 255, 0.12) !important;
+    --mud-palette-error: var(--error-color) !important;
+    --mud-palette-table-lines: var(--dark-bluegrey1) !important;
+    --mud-palette-table-hover: var(--primary-hover) !important;
+    --mud-palette-table-striped: var(--dark-bluegrey3) !important;
+    --mud-palette-appbar-background: var(--dark) !important;
+    --mud-palette-divider: rgba(255, 255, 255, 0.12) !important;
+    --mud-palette-divider-light: rgba(255, 255, 255, 0.06) !important;
+    --mud-palette-lines-default: var(--trim-color) !important;
+    --mud-palette-overlay-dark: rgba(0, 0, 0, .5) !important;
+    /* Font/text values */
+    --mud-palette-primary-text: var(--dark-bluegrey4) !important;
+    --mud-palette-text-primary: var(--lightest-color) !important;
+    --mud-palette-text-secondary: rgba(255,255,255, 0.50) !important;
+    --mud-palette-text-disabled: rgba(255, 255, 255, 0.2) !important;
+    /* ReSharper restore Redundant */
+}
+
+:root {
+	@include vis-brand;
+}

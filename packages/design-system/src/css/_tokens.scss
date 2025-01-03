@@ -1,9 +1,39 @@
 @use 'sass:math';
 
 @mixin theme {
-	--color-primary-h: var(--prim-color-primary-h);
-	--color-primary-s: var(--prim-color-primary-s);
-	--color-primary-l: 68%;
+	//vis colors
+	--dark: #000000;
+    --dark-grey: #111820;
+    --dark-bluegrey4: #1D2835;
+    --dark-bluegrey3: #293340;
+    --dark-bluegrey2: #343E4A;
+    --dark-bluegrey1: #565E68;
+    --dark-selected: #19232D;
+    --trim-color: var(--dark-bluegrey1);
+    --white: #FFFFFF;
+    --brand-marigold: #FFBC4E;
+    --primary-hover: rgba(255, 188, 78, 0.058823529411764705);
+    --light-color: #dcdcdc;
+    --lightest-color: #ffffff;
+    --lightest-color-60: rgba(255, 255, 255, 0.6);
+    --lightest-color-30: rgba(255, 255, 255, 0.3);
+    --critical-color: #D1478A;
+    --hot-mag: #D1478A;
+    --debug-color: #00A16B;
+    --error-color: #ff5000;
+    --information-color: #648FFF;
+    --sky-color: #648FFF;
+    --royalty-color: #7D61FA;
+    --success-color: #00C853;
+    --trace-color: #4b5563;
+    --warning-color: #EED202;
+    --disabled-color: rgba(255,255,255,0.4);
+    --disabled-hover-color: #343E4A;
+	
+	--prim-color-primary: var(--brand-marigold);
+	//--color-primary-h: var(--prim-color-primary-h);
+	//--color-primary-s: var(--prim-color-primary-s);
+	//--color-primary-l: 68%;
 
 	// Primary tokens
 
@@ -41,7 +71,7 @@
 	--color-danger-tint-2: var(--prim-color-alt-c-tint-450);
 
 	// Text
-	--color-text-dark: var(--prim-gray-740);
+	--color-text-dark: var(--white); //from vis
 	--color-text-base: var(--prim-gray-540);
 	--color-text-light: var(--prim-gray-420);
 	--color-text-lighter: var(--prim-gray-120);
@@ -49,7 +79,7 @@
 	--color-text-danger: var(--prim-color-alt-c);
 
 	// Foreground
-	--color-foreground-xdark: var(--prim-gray-490);
+	--color-foreground-xdark: var(--white);  //border of nodes
 	--color-foreground-dark: var(--prim-gray-200);
 	--color-foreground-base: var(--prim-gray-120);
 	--color-foreground-light: var(--prim-gray-70);
@@ -59,9 +89,9 @@
 	--color-background-dark: var(--prim-gray-820);
 	--color-background-medium: var(--prim-gray-120);
 	--color-background-base: var(--prim-gray-40);
-	--color-background-light-base: var(--prim-gray-25);
-	--color-background-light: var(--prim-gray-10);
-	--color-background-xlight: var(--prim-gray-0);
+	--color-background-light-base: var(--dark-bluegrey3);
+	--color-background-light: var(--dark-bluegrey3);  //this one is used for the grid
+	--color-background-xlight: var(--dark);  //from vis
 
 	// Secondary tokens
 
@@ -72,10 +102,10 @@
 	--color-lm-chat-user-color: var(--color-text-xlight);
 
 	// Canvas
-	--color-canvas-background: var(--prim-gray-10);
-	--color-canvas-background-h: var(--prim-gray-h); // Used for connectors labels background
-	--color-canvas-background-s: 47%;
-	--color-canvas-background-l: 99%;
+	--color-canvas-background: var(--dark);  //from vis
+	//--color-canvas-background-h: var(--prim-gray-h); // Used for connectors labels background
+	//--color-canvas-background-s: 47%;
+	//--color-canvas-background-l: 99%;
 	--color-canvas-dot: var(--prim-gray-120);
 	--color-canvas-read-only-line: var(--prim-gray-30);
 	--color-canvas-selected: var(--prim-gray-70);
