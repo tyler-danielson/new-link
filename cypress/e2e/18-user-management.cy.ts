@@ -151,6 +151,9 @@ describe('User Management', { disableAutoLogin: true }, () => {
 
 		personalSettingsPage.actions.changeTheme('Light');
 		cy.get('body').should('have.attr', 'data-theme', 'light');
+		
+		personalSettingsPage.actions.changeTheme('activu');
+		cy.get('body').should('have.attr', 'data-theme', 'activu');
 	});
 
 	it('should delete user and their data', () => {

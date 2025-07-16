@@ -29,7 +29,7 @@ export class PersonalSettingsPage extends BasePage {
 	};
 
 	actions = {
-		changeTheme: (theme: 'System default' | 'Dark' | 'Light') => {
+		changeTheme: (theme: 'System default' | 'Dark' | 'Light' | 'Activu') => {
 			this.getters.themeSelector().click();
 			this.getters.selectOptionsVisible().should('have.length', 3);
 			this.getters.selectOptionsVisible().contains(theme).click();

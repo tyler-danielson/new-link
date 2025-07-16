@@ -9,6 +9,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=n8n
+      - POSTGRES_USER=n8n
       - POSTGRES_PASSWORD=password
 
   n8n:
@@ -17,8 +18,12 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/workspaces:cached
-    command: sleep infinity
+    ports:
+      - "5678:5678"  # Optional, for external access
     environment:
-      DB_POSTGRESDB_HOST: postgres
-      DB_TYPE: postgresdb
-      DB_POSTGRESDB_PASSWORD: password
+      - DB_TYPE=postgres
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_USER=n8n
+      - DB_POSTGRESDB_PASSWORD=password
+      - WEBHOOK_URL=https://link.danielson.cloud
+    command: n8n

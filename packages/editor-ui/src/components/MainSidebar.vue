@@ -318,8 +318,8 @@ onClickOutside(createBtn as Ref<VueInstance>, () => {
 			:class="['clickable', $style.sideMenuCollapseButton]"
 			@click="toggleCollapse"
 		>
-			<N8nIcon v-if="isCollapsed" icon="chevron-right" size="xsmall" class="ml-5xs" />
-			<N8nIcon v-else icon="chevron-left" size="xsmall" class="mr-5xs" />
+			<N8nIcon v-if="isCollapsed" icon="arrow-right" size="xsmall" class="ml-5xs" color="var(--prim-color-primary)"/>
+			<N8nIcon v-else icon="arrow-left" size="xsmall" class="mr-5xs" color="var(--prim-color-primary)"/>
 		</div>
 		<div :class="$style.logo">
 			<Logo
@@ -468,11 +468,11 @@ onClickOutside(createBtn as Ref<VueInstance>, () => {
 .sideMenu {
 	position: relative;
 	height: 100%;
-	border-right: var(--border-width-base) var(--border-style-base) var(--color-foreground-base);
+	border-right: 2px var(--border-style-base) var(--prim-color-primary);
 	transition: width 150ms ease-in-out;
 	width: $sidebar-expanded-width;
 	padding-top: 54px;
-	background-color: var(--menu-background, var(--color-background-xlight));
+	background-color: var(--accent-color-3);
 
 	.logo {
 		position: absolute;
@@ -511,10 +511,10 @@ onClickOutside(createBtn as Ref<VueInstance>, () => {
 	justify-content: center;
 	align-items: center;
 	color: var(--color-text-base);
-	background-color: var(--color-foreground-xlight);
+	background-color: var(--accent-color-3);
 	width: 20px;
 	height: 20px;
-	border: var(--border-width-base) var(--border-style-base) var(--color-foreground-base);
+	border: var(--border-width-base) var(--border-style-base) var(--prim-color-primary);
 	border-radius: 50%;
 
 	&:hover {

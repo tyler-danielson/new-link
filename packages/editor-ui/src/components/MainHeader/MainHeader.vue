@@ -251,7 +251,7 @@ function hideGithubButton() {
 }
 
 .main-header {
-	background-color: var(--color-background-xlight);
+	background-color: var(--black);//var(--color-background-xlight);
 	width: 100%;
 	box-sizing: border-box;
 	border-bottom: var(--border-width-base) var(--border-style-base) var(--color-foreground-base);
@@ -264,6 +264,7 @@ function hideGithubButton() {
 	font-size: 0.9em;
 	font-weight: 400;
 	padding: var(--spacing-xs) var(--spacing-m);
+	
 }
 
 .github-button {
@@ -279,6 +280,7 @@ function hideGithubButton() {
 	background-color: var(--color-background-xlight);
 	border-bottom: var(--border-width-base) var(--border-style-base) var(--color-foreground-base);
 	border-left: var(--border-width-base) var(--border-style-base) var(--color-foreground-base);
+	
 }
 
 .close-github-button {
@@ -291,16 +293,19 @@ function hideGithubButton() {
 	background-color: var(--color-background-xlight);
 	border-radius: 100%;
 	cursor: pointer;
-
+	
 	&:hover {
 		color: var(--prim-color-primary-shade-100);
 	}
+	
 }
 .github-button-container {
 	position: relative;
+	visibility: hidden
 }
 
 .github-button:hover .close-github-button {
-	display: block;
+	display: none;
+	visibility: hidden
 }
 </style>

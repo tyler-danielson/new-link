@@ -2,6 +2,10 @@
 
 @mixin theme {
 	//vis colors
+	--accent-color-1: #565E68;
+    --accent-color-2: #343E4A;
+    --accent-color-3: #293340; //background on NV
+    --accent-color-4: #1D2835;
 	--dark: #000000;
     --dark-grey: #111820;
     --dark-bluegrey4: #1D2835;
@@ -11,8 +15,9 @@
     --dark-selected: #19232D;
     --trim-color: var(--dark-bluegrey1);
     --white: #FFFFFF;
+	--black: #000000;
     --brand-marigold: #FFBC4E;
-    --primary-hover: rgba(255, 188, 78, 0.058823529411764705);
+    --primary-hover: #bf944f; //darker marigold
     --light-color: #dcdcdc;
     --lightest-color: #ffffff;
     --lightest-color-60: rgba(255, 255, 255, 0.6);
@@ -38,7 +43,7 @@
 	// Primary tokens
 
 	// Primary
-	--color-primary-shade-1: var(--prim-color-primary-shade-100);
+	--color-primary-shade-1: var(--primary-hover); // test
 	--color-primary: var(--prim-color-primary);
 	--color-primary-tint-1: var(--prim-color-primary-tint-200);
 	--color-primary-tint-2: var(--prim-color-primary-tint-250);
@@ -72,26 +77,26 @@
 
 	// Text
 	--color-text-dark: var(--white); //from vis
-	--color-text-base: var(--prim-gray-540);
-	--color-text-light: var(--prim-gray-420);
-	--color-text-lighter: var(--prim-gray-120);
-	--color-text-xlight: var(--prim-gray-0);
+	--color-text-base: var(--black);
+	--color-text-light: var( --white);
+	--color-text-lighter: var( --dark-bluegrey2);
+	--color-text-xlight: var( --dark-bluegrey1);
 	--color-text-danger: var(--prim-color-alt-c);
 
 	// Foreground
 	--color-foreground-xdark: var(--white);  //border of nodes
 	--color-foreground-dark: var(--prim-gray-200);
-	--color-foreground-base: var(--prim-gray-120);
+	--color-foreground-base: var(--dark-bluegrey1);
 	--color-foreground-light: var(--prim-gray-70);
-	--color-foreground-xlight: var(--prim-gray-0);
+	--color-foreground-xlight: var(--dark-bluegrey3);
 
 	// Background
-	--color-background-dark: var(--prim-gray-820);
+	--color-background-dark: var(--dark);
 	--color-background-medium: var(--prim-gray-120);
 	--color-background-base: var(--prim-gray-40);
 	--color-background-light-base: var(--dark-bluegrey3);
 	--color-background-light: var(--dark-bluegrey3);  //this one is used for the grid
-	--color-background-xlight: var(--dark);  //from vis
+	--color-background-xlight: var(--dark-bluegrey3);  //from vis
 
 	// Secondary tokens
 
@@ -103,6 +108,7 @@
 
 	// Canvas
 	--color-canvas-background: var(--dark);  //from vis
+	
 	//--color-canvas-background-h: var(--prim-gray-h); // Used for connectors labels background
 	//--color-canvas-background-s: 47%;
 	//--color-canvas-background-l: 99%;
@@ -118,7 +124,7 @@
 	);
 
 	// Nodes
-	--color-node-background: var(--color-background-xlight);
+	--color-node-background: var(--dark);
 	--color-node-executing-background: var(--color-primary-tint-3);
 	--color-node-executing-other-background: var(--color-primary-tint-3);
 	--color-node-pinned-border: var(--color-secondary);
@@ -182,7 +188,7 @@
 
 	// NodeIcon
 	--color-node-icon-gray: var(--prim-gray-420);
-	--color-node-icon-black: var(--prim-gray-780);
+	--color-node-icon-black: var(--black);
 	--color-node-icon-blue: #3a42e9;
 	--color-node-icon-light-blue: #5fabf7;
 	--color-node-icon-dark-blue: #353f6e;
@@ -246,11 +252,11 @@
 	--color-variables-usage-syntax-bg: var(--color-success-tint-2);
 
 	// Button primary
-	--color-button-primary-font: var(--prim-gray-0);
-	--color-button-primary-border: var(--prim-color-primary);
+	--color-button-primary-font: var(--black);
+	--color-button-primary-border: var(--black);
 	--color-button-primary-background: var(--prim-color-primary);
-	--color-button-primary-hover-active-border: var(--prim-color-primary-shade-100);
-	--color-button-primary-hover-active-focus-background: var(--prim-color-primary-shade-100);
+	--color-button-primary-hover-active-border: var(--primary-hover);  //button hover
+	--color-button-primary-hover-active-focus-background: var(--primary-hover);
 	--color-button-primary-focus-outline: var(--prim-color-primary-alpha-035);
 	--color-button-primary-disabled-font: var(--prim-gray-0-alpha-075);
 	--color-button-primary-disabled-border: var(--prim-color-primary-tint-200);
@@ -259,7 +265,7 @@
 	// Button secondary
 	--color-button-secondary-font: var(--prim-gray-670);
 	--color-button-secondary-border: var(--prim-gray-320);
-	--color-button-secondary-background: var(--prim-gray-0);
+	--color-button-secondary-background: var(--prim-color-primary);
 	--color-button-secondary-hover-active-focus-font: var(--prim-color-primary-shade-100);
 	--color-button-secondary-hover-active-focus-border: var(--prim-color-primary);
 	--color-button-secondary-hover-background: var(--prim-color-primary-tint-300);
@@ -559,12 +565,13 @@
 	--color-grey: var(--prim-gray-200);
 	--color-light-grey: var(--prim-gray-120);
 	--color-neutral: var(--prim-gray-490);
-	--color-configurable-node-name: var(--color-text-dark);
+	--color-configurable-node-name: var(--color-text-light);
 	--color-secondary-link: var(--color-secondary);
 	--color-secondary-link-hover: var(--color-secondary-shade-1);
 
 	// Menu
-	--color-menu-background: var(--prim-gray-0);
+	--menu-background: var(--accent-color-3);
+	--color-menu-background: var(--dark-bluegrey3);
 	--color-menu-hover-background: var(--prim-gray-120);
 	--color-menu-active-background: var(--prim-gray-120);
 
@@ -608,9 +615,9 @@
 	--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.07);
 
 	--border-radius-xlarge: 12px;
-	--border-radius-large: 8px;
-	--border-radius-base: 4px;
-	--border-radius-small: 2px;
+	//--border-radius-large: 8px;
+	//--border-radius-base: 4px;
+	//--border-radius-small: 2px;
 	--border-color-base: var(--color-foreground-base);
 	--border-color-light: var(--color-foreground-light);
 
@@ -635,7 +642,7 @@
 
 	--font-weight-regular: 400;
 	--font-weight-bold: 600;
-	--font-family: 'Open Sans', sans-serif;
+	--font-family: 'Open Sans', regular;
 	--font-family-monospace: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 
 	--spacing-5xs: 0.125rem;

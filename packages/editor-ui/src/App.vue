@@ -83,6 +83,8 @@ watch(route, (r) => {
 watch(defaultLocale, (newLocale) => {
 	void loadLanguage(newLocale);
 });
+
+
 </script>
 
 <template>

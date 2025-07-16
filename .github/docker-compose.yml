@@ -5,6 +5,8 @@ services:
       - MARIADB_DATABASE=n8n
       - MARIADB_ROOT_PASSWORD=password
       - MARIADB_MYSQL_LOCALHOST_USER=true
+      - WEBHOOK_URL=https://link.danielson.cloud
+
     ports:
       - 3306:3306
     tmpfs:

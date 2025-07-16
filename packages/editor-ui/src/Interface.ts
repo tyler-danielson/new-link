@@ -1485,7 +1485,7 @@ export type ToggleNodeCreatorOptions = {
 	hasAddedNodes?: boolean;
 };
 
-export type AppliedThemeOption = 'light' | 'dark';
+export type AppliedThemeOption = 'light' | 'dark' | 'activu';
 export type ThemeOption = AppliedThemeOption | 'system';
 
 export type NewConnectionInfo = {

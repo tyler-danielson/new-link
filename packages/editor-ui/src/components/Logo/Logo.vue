@@ -80,8 +80,11 @@ onMounted(() => {
 
 .logoText {
 	margin-left: var(--spacing-5xs);
+    width: 45px;
+    height: 25px;
+    padding-left: 5px;
 	path {
-		fill: var(--color-text-dark);
+	//	fill: var(--color-text-dark);
 	}
 }
 
@@ -97,6 +100,7 @@ onMounted(() => {
 	line-height: var(--font-line-height-regular);
 	height: var(--spacing-s);
 	margin: 10px 0 0 3px;
+	visibility: hidden;
 }
 
 .authView {
@@ -113,7 +117,7 @@ onMounted(() => {
 }
 
 .sidebarCollapsed .logo {
-	width: 40px;
+	width: 30px;
 	height: 30px;
 	padding: 0 var(--spacing-4xs);
 }

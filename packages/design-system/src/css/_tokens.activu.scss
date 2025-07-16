@@ -3,9 +3,10 @@
 @mixin theme {
 	// Primary tokens
 	--color-danger: var(--prim-color-alt-k);
+	--prim-color-primary: green;//var(--brand-marigold);
 
 	// Text
-	--color-text-dark: var(--prim-gray-40);
+	--color-text-dark: green;//var(--prim-gray-40);
 	--color-text-base: var(--prim-gray-200);
 	--color-text-light: var(--prim-gray-320);
 	--color-text-lighter: var(--prim-gray-740);
@@ -24,7 +25,7 @@
 	--color-background-medium: var(--prim-gray-540);
 	--color-background-base: var(--prim-gray-670);
 	--color-background-light-base: var(--prim-gray-780);
-	--color-background-light: var(--accent-color-3);
+	--color-background-light: var(--prim-gray-820);
 	--color-background-xlight: var(--prim-gray-740);
 
 	--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 6px rgba(0, 0, 0, 0.1);
@@ -64,10 +65,10 @@
 	--color-lm-chat-user-border: var(--prim-color-alt-a);
 
 	// Canvas
-	--color-canvas-background: var(--accent-color-3);//var(--prim-gray-820);
-	//--color-canvas-background-h: var(--prim-gray-h); // Used for connectors labels background
-	//--color-canvas-background-s: 1%;
-	//--color-canvas-background-l: 18%;
+	--color-canvas-background: var(--prim-gray-820);
+	--color-canvas-background-h: var(--prim-gray-h); // Used for connectors labels background
+	--color-canvas-background-s: 1%;
+	--color-canvas-background-l: 18%;
 	--color-canvas-dot: var(--prim-gray-670);
 	--color-canvas-read-only-line: var(--prim-gray-800);
 	--color-canvas-selected: var(--prim-gray-0-alpha-025);
@@ -471,11 +472,11 @@
 	--color-menu-active-background: var(--prim-gray-670);
 }
 
-body[data-theme='dark'] {
+body[data-theme='activu'] {
 	@include theme;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: activu) {
 	body:not([data-theme]) {
 		@include theme;
 	}

@@ -49,6 +49,10 @@ const themeOptions = ref<Array<{ name: ThemeOption; label: string }>>([
 		name: 'dark',
 		label: 'settings.personal.theme.dark',
 	},
+	{
+		name: 'activu',
+		label: 'settings.personal.theme.activu',
+	},
 ]);
 
 const uiStore = useUIStore();
